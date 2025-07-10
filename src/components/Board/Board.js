@@ -3,12 +3,17 @@ import Square from '../Square/Square'
 
 
 const Board = () => {
+  const [xIsNext, setXIsNext] = React.useState(true);
   const [squares, setSquares] = React.useState(Array(9).fill('-'));
 
   function handleClick(i) {
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+    if (nextSquares[i] === '-') {
+      nextSquares[i] = xIsNext ? 'X' : 'O';
+      setXIsNext(!xIsNext);
+    }
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
   return (
