@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Square = ({ value }) => {
+const Square = () => {
+  const [value, setValue] = useState('-');
+
   function handleClick() {
-    console.log("Square clicked with value:", value);
-    alert(`Square clicked! Value: ${value}`);
+    setValue('X');
   }
 
   return (
