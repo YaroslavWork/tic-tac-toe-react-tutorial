@@ -2,7 +2,7 @@ import React from 'react'
 import Square from '../Square/Square'
 
 
-const Board = () => {
+export default function Board() {
   const [xIsNext, setXIsNext] = React.useState(true);
   const [squares, setSquares] = React.useState(Array(9).fill('-'));
   const winner = calculateWinner(squares);
@@ -65,5 +65,3 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
-export default Board

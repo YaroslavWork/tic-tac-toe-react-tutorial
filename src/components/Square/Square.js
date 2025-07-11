@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Square = ( {value, onSquareClick }) => {
+export default function Square( {value, onSquareClick } ){
   return (
     <button
       className="square"
@@ -10,5 +10,3 @@ const Square = ( {value, onSquareClick }) => {
     </button>
   )
 }
-
-export default Square
